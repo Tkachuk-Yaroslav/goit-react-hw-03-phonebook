@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Filter from './Filter/Filter';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import Contact from './Contact/Contact';
 
 class App extends Component {
   state = {

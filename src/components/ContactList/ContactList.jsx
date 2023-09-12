@@ -22,4 +22,8 @@ const ContactList = ({ contacts, onDeleteContact }) => {
   );
 };
 
+// const ContactList = ({ contacts, onDeleteContact, children }) => {
+//   return <ul>{children}</ul>;
+// };
+
 export default ContactList;
