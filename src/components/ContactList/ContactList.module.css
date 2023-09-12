@@ -1,0 +1,32 @@
+.item {
+}
+
+.title {
+  display: inline-block;
+  margin-right: 8px;
+  height: 30px;
+}
+
+.number {
+  display: inline-block;
+  margin-right: 16px;
+  height: 30px;
+}
+
+.delete {
+  display: inline-block;
+  height: 30px;
+  background-color: aliceblue;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  font-size: 18px;
+  transition: transform 250ms linear;
+}
+
+.delete:hover,
+.delete:focus {
+  transform: scale(1.1);
+  background-color: aqua;
+}

@@ -1,0 +1,18 @@
+.label {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  margin-bottom: 8px;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+}
+
+.input {
+  width: 250px;
+  height: 30px;
+}
+
+.input:focus {
+  outline: 5px solid blue;
+}
