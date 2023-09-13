@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Filter from './Filter/Filter';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import Modal from './Modal/Modal';
 // import Contact from './Contact/Contact';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
     ],
     name: '',
     filter: '',
+    // showModal: false,
   };
 
   componentDidMount() {
@@ -36,9 +38,12 @@ class App extends Component {
     }
   }
 
-  // formSubmitHandler = data => {
-  //   console.log(data);
+  // toggleModal = () => {
+  //   this.setState(prevState => ({
+  //     showModal: !prevState.showModal,
+  //   }));
   // };
+
   addContact = dataByForm => {
     console.log(dataByForm);
 
@@ -70,6 +75,7 @@ class App extends Component {
   };
   render() {
     const { contacts } = this.state;
+    // const { showModal } = this.state;
     const { filter } = this.state;
     const enableContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -77,6 +83,17 @@ class App extends Component {
 
     return (
       <div>
+        {/* <button type="button" onClick={this.toggleModal}>
+          Відкрити модалку
+        </button>
+        {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <h1 style={{ textAlign: 'center' }}>ДЗ №3 частина один</h1>
+            <button type="button" onClick={this.toggleModal}>
+              Закрити модалку
+            </button>
+          </Modal>
+        )} */}
         <h1>Phonebook</h1>
         <PhonebookForm onSubmit={this.addContact} />
         <h2>Contacts</h2>
