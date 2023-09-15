@@ -77,6 +77,7 @@ class App extends Component {
     const { contacts } = this.state;
     // const { showModal } = this.state;
     const { filter } = this.state;
+    const { addContact, findByFilted, deleteContact } = this;
     const enableContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
@@ -95,12 +96,12 @@ class App extends Component {
           </Modal>
         )} */}
         <h1>Phonebook</h1>
-        <PhonebookForm onSubmit={this.addContact} />
+        <PhonebookForm onSubmit={addContact} />
         <h2>Contacts</h2>
-        <Filter value={this.state.filter} onChange={this.findByFilted} />
+        <Filter value={filter} onChange={findByFilted} />
         <ContactList
           contacts={enableContacts}
-          onDeleteContact={this.deleteContact}
+          onDeleteContact={deleteContact}
         />
       </div>
     );
